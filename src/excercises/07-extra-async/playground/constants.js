@@ -1,0 +1,6 @@
+// Constants
+const HALF_LUCKY = 0.5;
+const SMALL_TIMEOUT = 300;
+const REGULAR_TIMEOUT = 500;
+const LARGE_TIMEOUT = 800;
+const MIN_SKELETONS_AMOUNT = 5;

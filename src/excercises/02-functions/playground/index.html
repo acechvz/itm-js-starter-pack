@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions - Playground</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- DO NOT MODIFY THE CONTENT -->
+    <div id="app" class="bg-gradient-to-r from-red-100 to-blue-200">
+      <div
+        class="max-w-screen-xl mx-auto px-4 min-h-screen py-10 flex flex-col items-center justify-center"
+      >
+        <div class="flex items-center gap-x-2 mb-4">
+          <button
+            data-testid="decreaseCounter"
+            class="text-red-400 text-lg w-10 outline-none"
+          >
+            <i class="fas fa-minus"></i>
+          </button>
+          <div data-testid="result">
+            <div
+              class="text-white font-solid text-3xl w-16 h-16 bg-red-400 rounded-xl shadow-md inline-flex items-center justify-center"
+            >
+              <span data-testid="counter">0</span>
+            </div>
+          </div>
+          <button
+            data-testid="increaseCounter"
+            class="text-red-400 text-lg w-10 outline-none"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <button
+          data-testid="resetButton"
+          class="px-4 py-2 bg-white rounded-md text-red-400 font-bold"
+        >
+          Reset
+        </button>
+        <div
+          data-testid="errorMessage"
+          class="fixed top-4 bg-white bg-opacity-90 py-4 px-6 inset-x-auto rounded-md shadow-md transition opacity-0"
+        >
+          We can't go beyond 3 😔
+        </div>
+      </div>
+    </div>
+
+    <!-- You can change anything inside the script tag -->
+    <script>
+      // Hint 🔍 : This variable should help you track the counter
+      let currentCount = 0;
+
+      const result = document.querySelector("[data-testid=result]");
+      const resetButton = document.querySelector("[data-testid=resetButton]");
+      const errorMessage = document.querySelector("[data-testid=errorMessage]");
+      const counter = document.querySelector("[data-testid=counter]");
+      
+      // 1: 📝 Your tasks
+      // 1.1
+      // Hint 🔍 : You can get any element in the page by using document.querySelector('[YOUR_CSS_SELECTOR]');
+      // https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+      // [ ] - Replace the selector "[??]" with the right one to match the correct element in the page.
+      const decreaseCounter = document.querySelector("[??]");
+      const increaseCounter = document.querySelector("[??]");
+      // 1.2  
+      // [ ] - Update the "counter" element content with "currentCount"
+
+      const updateCounter = () => {
+        // 2 📝 Your tasks
+        // 2.1
+        // [ ] - Update the "counter" element content with "currentCount"
+        // [ ] - Add the class "opacity-0" to the "errorMessage" element
+
+        // 2.2
+        // [ ] - Add a condition to check if "currentCount" is equal to 3
+        // [ ] - If true: Remove the class "opacity-0" from the "errorMessage" element
+      };
+
+      increaseCounter.addEventListener("click", () => {
+        // 3: 📝 Your tasks
+        // 3.1
+        // [ ] - Add a condition to allow increasing the "currentCount" is its lower than 3
+        // [ ] - Increment by 1 the value of "currentCount"
+
+        // 3.2
+        // [ ] - Call the method updateCounter inside the condition;
+      });
+
+      decreaseCounter.addEventListener("click", () => {
+        // 4: 📝 Your tasks
+        // [ ] - Decrease the currentCount value by 1
+        // [ ] - Call the method updateCounter
+      });
+
+      resetButton.addEventListener("click", function () {
+        // 5: 📝 Your tasks
+        // [ ] - Add the logic to reset the "currentCount" to 0
+        // [ ] - Update the "counter" element content with "currentCount"
+        // [ ] - Update the CSS "display" property of the "errorMessage" element to "none"
+      });
+    </script>
+  </body>
+</html>

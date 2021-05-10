@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async &amp; Await</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="app" class="bg-gradient-to-r from-red-100 to-blue-200">
+      <div
+        class="max-w-screen-xl mx-auto px-4 min-h-screen py-10 flex items-center"
+      >
+        <div class="w-full sm:w-3/5 lg:w-2/5 h-full mx-auto shadow-lg relative">
+          <div
+            class="bg-white p-4 shadow-md z-10 relative rounded-md rounded-bl-none rounded-br-none grid grid-cols-3 items-center"
+          >
+            <div>
+                <button id="backButton" href="#" class="px-2 hidden focus:outline-none">
+                  <i class="fas fa-chevron-left fa-lg"></i>
+                </button>
+            </div>
+            <h3
+              class="text-lg text-black text-center font-semibold col-start-2"
+            >
+              Contacts
+            </h3>
+            <div class="text-right">
+                <button id="favButton" class="focus:outline-none text-right text-red-400 hidden">
+                    <i class="far fa-heart fa-lg"></i>
+                </button>
+            </div>
+          </div>
+          <div
+            class="overflow-hidden bg-gray-100 rounded-lg rounded-tl-none rounded-tr-none relative"
+          >
+            <div
+              id="usersList"
+              data-testid="usersList"
+              style="height: 500px"
+              class="flex-1 transition transform relative overflow-scroll flex flex-col gap-y-4 p-4 pb-8"
+            ></div>
+            <div
+              id="userDetails"
+              class="flex-1 transition transform translate-x-full h-full absolute top-0 left-0 w-full p-4"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-20 block bg-gradient-to-t from-white to-transparent"
+            ></div>
+          </div>
+          <button
+            id="loadMoreButton"
+            class="w-14 h-14 bg-blue-500 text-white rounded-full absolute bottom-4 right-4 shadow-lg focus:outline-none"
+          >
+            <i class="fas fa-sync"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="playground/constants.js"></script>
+    <script src="playground/containers.js"></script>
+    <script src="playground/playground.js"></script>
+    <script>
+        Contacts.mount();
+    </script>
+  </body>
+</html>

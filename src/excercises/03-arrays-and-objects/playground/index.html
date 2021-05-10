@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays &amp; Objects - Playground</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css" />
+    <link rel="stylesheet" href="https://codemirror.net/theme/ayu-mirage.css" />
+    <style>
+      .CodeMirror {
+        height: 100%;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DO NOT MODIFY THE CONTENT -->
+    <div id="app">
+      <div class="flex min-h-screen">
+        <div class="max-h-screen w-2/5 relative">
+          <textarea id="code" class="bg-white">
+                       
+          </textarea>
+          <button data-testid="buttonReset" class="absolute top-2 right-2 z-10 w-12 h-12 rounded-lg bg-gray-900 text-gray-400">
+              <i class="fas fa-redo-alt"></i>
+          </button>
+          <button data-testid="buttonPlay" class="absolute bottom-2 right-2 z-10 w-12 h-12 rounded-lg bg-gray-900 text-gray-400">
+            <i class="fas fa-play"></i>
+          </button>
+        </div>
+        <div
+          class="py-10 px-4 w-3/5 bg-gradient-to-bl from-green-400 to-blue-400"
+        >
+          <div class="max-w-screen-lg mx-auto">
+            <h1 class="text-3xl text-center font-semibold text-white row-auto">
+                John &amp; Ally's Farm 🧑‍🌾 👩‍🌾 🚜
+              </h1>
+    
+              <div class="mt-8">
+                <div class="grid grid-cols-3 gap-2 text-white">
+                  <div class="bg-white bg-opacity-90 p-4 rounded-md shadow-md">
+                    <h3 class="text-gray-700 font-semibold text-center mb-2">
+                      Birds
+                    </h3>
+                    <div
+                      id="birds"
+                      class="px-2 rounded-md flex items-center justify-center text-2xl"
+                    >
+                    </div>
+                  </div>
+                  <div class="bg-white bg-opacity-90 p-4 rounded-md shadow-md">
+                    <h3 class="text-gray-700 font-semibold text-center mb-2">
+                      Equines
+                    </h3>
+                    <div
+                      id="equines"
+                      class="px-2 rounded-md flex items-center justify-center text-2xl"
+                    >
+                    </div>
+                  </div>
+                  <div class="bg-white bg-opacity-90 p-4 rounded-md shadow-md">
+                    <h3 class="text-gray-700 font-semibold text-center mb-2">
+                      Cuties
+                    </h3>
+                    <div
+                      id="cuties"
+                      class="px-2 rounded-md flex items-center justify-center text-2xl"
+                    >
+                    </div>
+                  </div>
+                  <div class="bg-white bg-opacity-90 p-4 rounded-md shadow-md col-span-3">
+                    <h3 class="text-gray-700 font-semibold text-center mb-2">
+                      All Animals
+                    </h3>
+                    <div
+                      id="all"
+                      class="px-2 rounded-md grid grid-cols-4 gap-2 items-center justify-center text-xl text-gray-800"
+                    >
+                    </div>
+                  </div>
+                  <div class="bg-white bg-opacity-90 p-4 rounded-md shadow-md col-span-3">
+                    <h3 class="text-gray-700 font-semibold text-center mb-2">
+                     Animals Free 🌳 🌼 🌿 🌷 🌻
+                    </h3>
+                    <div
+                      id="free"
+                      class="px-2 rounded-md grid grid-cols-4 gap-2 items-center justify-center text-xl text-gray-800"
+                    >
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/codemirror.min.js"
+    integrity="sha512-LwxFyHyqmDdcint8dhTSHeJuI+uH5r/vrcGkxH4QhHGP8SpNaS9MVa1BxZRNTb1GPyLBAWrjbWpZTPGgtDgJOw=="
+    crossorigin="anonymous"
+    ></script>
+    <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+    <script src="http://localhost:8080/constants.js"></script>
+    <script src="http://localhost:8080/playground.js"></script>
+  </body>
+</html>
